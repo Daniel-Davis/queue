@@ -9,14 +9,14 @@ function distribute(nums, queues, n, digit) {
   }
 }
 
-function collect(queues, nums) {
- var i = 0;
- for (var digit = 0; digit < 10; ++digit) {
-   while (!queues[digit].empty()) {
-     nums[i++] = queues[digit].dequeue();
-     }
-   }
-}
+function collect(queues, nums) { // function called collect that takes the arguments of queues and nums
+ var i = 0; // initializes a variable i and sets it to 0
+ for (var digit = 0; digit < 10; ++digit) { // for loop that goes through 10 times
+   while (!queues[digit].empty()) { // as long as queues is not empty
+     nums[i++] = queues[digit].dequeue(); // nums will get that element and make room for the next one
+     }// end of while loop
+   }// end of for loop
+}// end of collect
 
 function dispArray(arr) {
  for (var i = 0; i < arr.length; ++i) {
